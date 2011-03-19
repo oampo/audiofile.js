@@ -4,7 +4,7 @@ audiofile.js is a small JavaScript library for loading WAV and AIFF files into F
 
 How do I use it?
 ----------------
-To load the file 'test.wav' using an asynchronous XMLHttpRequest
+To load the file 'test.wav' using an asynchronous XMLHttpRequest:
 
     var request = new AudioFileRequest('test.wav');
     request.onSuccess = new function(decoded) {
@@ -26,9 +26,7 @@ An example showing how the decoded object is used can be found [here](https://gi
 
 Synchronous requests can be made by passing 'false' as a second argument to AudioFileRequest.
 
-If the audio data is loaded using a different mechanism, it can be decoded independently using the WAVDecoder and AIFFDecoder classes.
-
-For example, the following code will decode a string containing WAV file data:
+If the audio data is loaded using a different mechanism, it can be decoded independently using the WAVDecoder and AIFFDecoder classes.  For example, the following code will decode a string containing WAV file data:
 
     var decoder = new WAVDecoder();
     var decoded = decoder.decode(data);
